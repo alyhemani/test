@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Gold: {{request.session.gold}}
+	<div class="gold">
+	<h3>Farm</h3>
+	<form action="/process" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="farm" value="farm">
+		<input type="submit" value="Find Gold">	
+	</form>
+	</div>
+	<div class="gold">
+	<h3>Cave</h3>
+	<form action="/process" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="cave" value="cave">
+		<input type="submit" value="Find Gold">	
+	</form>
+	</div>
+	<div class="gold">
+	<h3>House</h3>
+	<form action="/process" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="house" value="house">
+		<input type="submit" value="Find Gold">	
+	</form>
+	</div>
+	<div class="gold">
+	<h3>Casino</h3>
+	<form action="/process" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="casino" value="casino">
+		<input type="submit" value="Find Gold">	
+	</form>
+	<div>
+	<p>{{request.session.log}}</p>
+	</div>
+</body>
+</html>
