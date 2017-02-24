@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Gold Digger</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'first_ninja/basic.css' %}">
+
 </head>
 <body>
-	Gold: {{request.session.gold}}
-	<div class="gold">
-	<h3>Farm</h3>
-	<form action="/process" method="post">
-		{% csrf_token %}
-		<input type="hidden" name="farm" value="farm">
-		<input type="submit" value="Find Gold">	
-	</form>
-	</div>
-	<div class="gold">
-	<h3>Cave</h3>
-	<form action="/process" method="post">
-		{% csrf_token %}
-		<input type="hidden" name="cave" value="cave">
-		<input type="submit" value="Find Gold">	
-	</form>
-	</div>
-	<div class="gold">
-	<h3>House</h3>
-	<form action="/process" method="post">
-		{% csrf_token %}
-		<input type="hidden" name="house" value="house">
-		<input type="submit" value="Find Gold">	
-	</form>
-	</div>
-	<div class="gold">
-	<h3>Casino</h3>
-	<form action="/process" method="post">
-		{% csrf_token %}
-		<input type="hidden" name="casino" value="casino">
-		<input type="submit" value="Find Gold">	
-	</form>
-	<div>
-	<p>{{request.session.log}}</p>
+	<div id="webber">
+		<h1 id="title">Gold Digger</h1>
+		<div class="balance">
+		<h3>Gold: {{request.session.gold}}</h3>
+		</div>
+		<div class="gold">
+		<h3>Farm</h3>
+		<h5>Earns 10-20 Gold</h5>
+		<form action="/process" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="farm" value="farm">
+			<input type="submit" value="Find Gold">	
+		</form>
+		</div>
+		<div class="gold">
+		<h3>Cave</h3>
+		<h5>Earns 5-10 Gold</h5>
+		<form action="/process" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="cave" value="cave">
+			<input type="submit" value="Find Gold">	
+		</form>
+		</div>
+		<div class="gold">
+		<h3>House</h3>
+		<h5>Earns 2-5 Gold</h5>
+		<form action="/process" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="house" value="house">
+			<input type="submit" value="Find Gold">	
+		</form>
+		</div>
+		<div class="gold">
+		<h3>Casino</h3>
+		<h5>Earns/Takes 0-50 Gold</h5>
+		<form action="/process" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="casino" value="casino">
+			<input type="submit" value="Find Gold">	
+		</form>
+		</div>
+		<div class="balance">
+		<h4>{{request.session.log}}</h4>
+		</div>
 	</div>
 </body>
 </html>

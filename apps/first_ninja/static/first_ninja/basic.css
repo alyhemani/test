@@ -1,0 +1,31 @@
+#webber{
+	width:auto;
+	height:auto;
+	background-image:url('https://d.gr-assets.com/hostedimages/1393642280ra/8745162.gif');
+	background-size:cover;
+	color:white;
+}
+.gold{
+	display:inline-block;
+	text-align:center;
+	border:solid black;
+	border-width:1px;
+	width:150px;
+	height:150px;
+	background-color:black;
+	color:white;
+	background:rgba(0, 0, 0, 0.8);
+}
+.balance{
+	color:white;
+	background-color:black;
+	width:620px;
+	text-align:center;
+	background:rgba(0, 0, 0, 0.8);
+}
+#title{
+	background-color:black;
+	width:620px;
+	background:rgba(0, 0, 0, 0.8);
+	text-align:center;
+}
